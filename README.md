@@ -1,39 +1,32 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# soft_metatags
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages). 
+![License](https://img.shields.io/github/license/softyesti/soft_metatags)
+![Contributions Status](https://img.shields.io/badge/contributions-Closed-red)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages). 
--->
+An enhanced Dart package with Rust for reading and writing audio file metadata.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## 🧰 Features
 
-## Features
+Coming soon...
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## 🧑‍💻 Technologies
 
-## Getting started
+[![Made with Rust](https://img.shields.io/badge/lang-Rust-purple)]((https://dart.dev/))
+[![Made with Dart](https://img.shields.io/badge/lang-Dart-purple)]((https://dart.dev/))
+[![style: very good analysis](https://img.shields.io/badge/dart_style-Very_Good_Analysis-B22C89.svg)](https://pub.dev/packages/very_good_analysis)
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+* [Rust(1.92.0)](https://rust-lang.org/)
+* [Dart(^3.10.7)](https://dart.dev/)
 
-## Usage
+## 🖥️ Platforms
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+* IOS(>=16) 🟡
+* Linux(any) 🟡
+* Android(>=11) 🟡
+* macOS(>=12.4) ✅
+* Windows(>=10.0) 🟡
 
-```dart
-const like = 'sample';
-```
+## 📜 Credits
 
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+* SoftYes TI [\<softyes.com.br\>](https://softyes.com.br)
+* João Sereia [\<joao.sereia@softyes.com.br\>](mailto:joao.sereia@softyes.com.br)
