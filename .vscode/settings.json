@@ -1,8 +1,20 @@
 {
   "cSpell.words": [
+    "androideabi",
+    "armv",
+    "cdylib",
+    "cfgs",
+    "codegen",
+    "darwin",
+    "ffigen",
+    "frbgen",
+    "libsoft",
+    "linux",
     "metatags",
+    "msvc",
     "pubspec",
-    "softyes"
+    "softyes",
+    "staticlib"
   ],
   "dart.flutterSdkPath": ".fvm/versions/3.38.7"
 }

@@ -1,0 +1,3 @@
+dart_output: lib/src/rust/
+rust_input: rust/src/api/**/*.rs
+c_output: rust/target/frb_generated.h

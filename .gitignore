@@ -8,3 +8,7 @@ pubspec.lock
 
 # FVM Version Cache
 .fvm/
+
+build/
+
+.DS_Store
