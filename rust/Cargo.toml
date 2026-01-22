@@ -1,0 +1,13 @@
+[package]
+edition = "2024"
+version = "0.1.0"
+name = "soft_metatags"
+
+[lib]
+crate-type = ["staticlib", "cdylib"]
+
+[dependencies]
+flutter_rust_bridge = "=2.11.1"
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(frb_expand)'] }
