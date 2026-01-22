@@ -1,15 +1,22 @@
 name: soft_metatags
-description: A starting point for Dart libraries or applications.
-version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+description: An enhanced Dart package with Rust for reading and writing audio file metadata.
+
+homepage: https://softyes.com.br
+repository: https://github.com/softyesti/soft_metatags
+
+authors:
+  - SoftYes TI
+  - João Sereia
+
+version: 0.1.0
 
 environment:
   sdk: ^3.10.7
 
-# Add regular dependencies here.
 dependencies:
-  # path: ^1.9.0
+  path: ^1.9.0
 
 dev_dependencies:
-  lints: ^6.0.0
   test: ^1.25.6
+  lints: ^6.0.0
+  very_good_analysis: ^10.0.0
