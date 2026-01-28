@@ -1,37 +1,53 @@
 import 'dart:io';
 
-import 'package:flutter_rust_bridge/flutter_rust_bridge_for_generated.dart';
-import 'package:path/path.dart' as p;
-import 'package:soft_metatags/src/rust/api/soft_metatags.dart';
-import 'package:soft_metatags/src/rust/frb_generated.dart';
+import 'package:soft_metatags/src/domain/entities/song_entity.dart';
+import 'package:soft_metatags/src/exceptions/initialized_exception.dart';
+import 'package:soft_metatags/src/repositories/api_repository.dart';
+import 'package:soft_metatags/src/repositories/dylib_repository.dart';
+import 'package:soft_metatags/src/services/api_service.dart';
+import 'package:soft_metatags/src/services/dylib_service.dart';
 
-///
-abstract class SoftMetatags {
-  /// Initializes the Rust library.
-  static Future<void> initialize({Directory? dir}) async {
-    if (dir == null) return RustLib.init();
+/// [SoftMetaTags] library.
+final class SoftMetaTags {
+  const SoftMetaTags._(this._apiRepo, this._dylibRepo);
 
-    final filename = p.setExtension('libsoft_metatags', _getExtension());
-    final path = p.normalize(p.join(dir.path.trim(), filename.trim()));
+  final ApiRepository _apiRepo;
+  final DylibRepository _dylibRepo;
 
-    return RustLib.init(externalLibrary: ExternalLibrary.open(path));
+  static SoftMetaTags? _instance;
+
+  /// Gets the instance of the [SoftMetaTags] library.
+  static SoftMetaTags get instance {
+    if (_instance != null) return _instance!;
+    throw SoftMetaTagsInitException();
   }
 
-  /// Disposes the Rust library.
-  static void dispose() => RustLib.dispose();
-
-  /// A minimal adder function that adds two integers.
-  static Future<int> adder(int a, int b) => minimalAdder(a: a, b: b);
-
-  static String _getExtension() {
-    if (Platform.isWindows) {
-      return '.dll';
-    } else if (Platform.isIOS || Platform.isMacOS) {
-      return '.dylib';
-    } else if (Platform.isLinux || Platform.isAndroid) {
-      return '.so';
+  /// Initializes the [SoftMetaTags] library.
+  static Future<void> initialize([Directory? directory]) async {
+    if (_instance?._dylibRepo.initialized ?? false) {
+      return;
     }
 
-    return '';
+    _instance = const SoftMetaTags._(
+      ApiRepository(ApiService()),
+      DylibRepository(DylibService()),
+    );
+
+    return _instance!._dylibRepo.initialize(directory);
+  }
+
+  /// Disposes the [SoftMetaTags] library.
+  static void dispose() {
+    _instance?._dylibRepo.dispose();
+    _instance = null;
+  }
+
+  /// Read audio metadata from a [File].
+  Future<SongMetaTag?> read(File file) async => _apiRepo.read(file);
+
+  /// Read audio metadata from a [List] of [File].
+  Future<Iterable<SongMetaTag>> readAll(List<File> files) async {
+    final songs = await Future.wait(files.map(_apiRepo.read));
+    return songs.nonNulls;
   }
 }
