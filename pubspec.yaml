@@ -16,6 +16,7 @@ environment:
 dependencies:
   path: ^1.9.1
   hooks: ^1.0.0
+  meta: ^1.17.0
   code_assets: ^1.0.0
   flutter_rust_bridge: ^2.11.1
   native_toolchain_rust: ^1.0.3
@@ -24,4 +25,5 @@ dev_dependencies:
   test: ^1.25.6
   lints: ^6.0.0
   ffigen: ^20.1.1
+  build_runner: ^2.10.5
   very_good_analysis: ^10.0.0

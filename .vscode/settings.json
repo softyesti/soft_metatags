@@ -1,20 +1,38 @@
 {
+  "dart.flutterSdkPath": ".fvm/versions/3.38.8",
+  "[rust]": {
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
   "cSpell.words": [
+    "addrof",
+    "america",
     "androideabi",
     "armv",
+    "autoadd",
+    "bindgen",
+    "byteorder",
+    "cbindgen",
     "cdylib",
     "cfgs",
     "codegen",
     "darwin",
+    "exts",
     "ffigen",
+    "flac",
     "frbgen",
+    "funcs",
+    "isrc",
     "libsoft",
+    "Lifetimeable",
     "linux",
+    "Metatag",
     "metatags",
     "msvc",
     "pubspec",
     "softyes",
+    "songtag",
     "staticlib"
   ],
-  "dart.flutterSdkPath": ".fvm/versions/3.38.7"
+  "makefile.configureOnOpen": false
 }
