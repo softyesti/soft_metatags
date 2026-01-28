@@ -7,7 +7,8 @@ An enhanced Dart package with Rust for reading and writing audio file metadata.
 
 ## 🧰 Features
 
-Coming soon...
+* Read the metadata of an audio file
+* Read the metadata of a set of audio files
 
 ## 🧑‍💻 Technologies
 
