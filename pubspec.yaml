@@ -4,9 +4,17 @@ description: An enhanced Dart package with Rust for reading and writing audio fi
 homepage: https://softyes.com.br
 repository: https://github.com/softyesti/soft_metatags
 
-authors:
-  - SoftYes TI
-  - João Sereia
+platforms:
+  linux:
+  macos:
+  windows:
+
+topics:
+  - file
+  - tag
+  - read
+  - audio
+  - metadata
 
 version: 0.1.0
 
