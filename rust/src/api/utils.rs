@@ -2,7 +2,7 @@ use flutter_rust_bridge::frb;
 
 #[frb(ignore)]
 pub fn split_string(string: &String) -> Vec<String> {
-  string.split(";").map(|s| s.to_string()).collect()
+  string.split(";").map(|s| s.trim().to_string()).collect()
 }
 
 #[frb(ignore)]
