@@ -12,12 +12,12 @@ An enhanced Dart package with Rust for reading and writing audio file metadata.
 
 ## 🧑‍💻 Technologies
 
-[![Made with Rust](https://img.shields.io/badge/lang-Rust-purple)]((https://dart.dev/))
-[![Made with Dart](https://img.shields.io/badge/lang-Dart-purple)]((https://dart.dev/))
-[![style: very good analysis](https://img.shields.io/badge/dart_style-Very_Good_Analysis-B22C89.svg)](https://pub.dev/packages/very_good_analysis)
+![Made with Rust](https://img.shields.io/badge/lang-Rust-purple)
+![Made with Dart](https://img.shields.io/badge/lang-Dart-purple)
+![style: very good analysis](https://img.shields.io/badge/dart_style-Very_Good_Analysis-B22C89.svg)
 
 * [Rust(1.92.0)](https://rust-lang.org/)
-* [Dart(^3.10.7)](https://dart.dev/)
+* [Dart(^3.11.0)](https://dart.dev/)
 
 ## 🖥️ Platforms
 
