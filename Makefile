@@ -1,4 +1,8 @@
-.PHONY: runner bindings clean upgrade
+.PHONY: deps runner bindings clean upgrade
+
+deps:
+	@echo "Installing dependencies...."
+	@cargo install flutter_rust_bridge_codegen
 
 runner:
 	@echo "Running the build_runner..."

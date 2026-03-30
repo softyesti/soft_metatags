@@ -12,3 +12,5 @@ pubspec.lock
 build/
 
 .DS_Store
+
+pubspec_overrides*
