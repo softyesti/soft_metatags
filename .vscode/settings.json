@@ -1,5 +1,5 @@
 {
-  "dart.flutterSdkPath": ".fvm/versions/3.41.6",
+  "dart.flutterSdkPath": ".fvm/versions/3.41.9",
   "[rust]": {
     "editor.inlayHints.enabled": "offUnlessPressed",
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
@@ -32,7 +32,8 @@
     "pubspec",
     "softyes",
     "songtag",
-    "staticlib"
+    "staticlib",
+    "uninlined"
   ],
   "makefile.configureOnOpen": false
 }
