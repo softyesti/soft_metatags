@@ -27,7 +27,7 @@ dependencies:
   hooks: ^1.0.0
   meta: ^1.17.0
   code_assets: ^1.0.0
-  flutter_rust_bridge: ^2.12.0
+  flutter_rust_bridge: 2.12.0
   native_toolchain_rust: ^1.0.3
 
 dev_dependencies:
